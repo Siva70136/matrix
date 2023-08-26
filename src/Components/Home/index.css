@@ -1,0 +1,179 @@
+
+.app-container{
+    display: flex;
+    justify-content: space-between;
+    background-image: url('https://images.pexels.com/photos/2449600/pexels-photo-2449600.png?auto=compress&cs=tinysrgb&w=600');
+    background-size: cover;
+}
+.s{
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.title{
+    font-family: ' Roboto';
+    font-size: 16px;
+    
+}
+.nav-container {
+    width: 100%;
+    margin-bottom: 10px;
+    
+
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    
+}
+
+.search-container {
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 8px;
+    width: 290px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+}
+
+.input {
+    border: none;
+    border-width: 0px;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.search {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+}
+
+.button {
+    outline: none;
+    cursor: pointer;
+    padding: 12px;
+    border-width: 0px;
+    background-image: linear-gradient(#b300b3, #cc0099);
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+}
+
+.menu-md-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #181818;
+    color: #f9f9f9;
+    padding: 10px;
+    height: 100vh;
+    border-radius: 0px 10px 10px 0px;
+}
+.menu-sm-container{
+    display: none;
+}
+
+.item {
+    list-style: none;
+}
+
+.item-container {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 150px;
+    height: 40px;
+}
+
+.caption {
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+.image-container{
+    display: flex;
+}
+.image{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+  
+}
+
+
+
+
+
+
+
+.data-container {
+    display: flex;
+    margin-top: 50px;
+}
+
+.card {
+    margin: 5px;
+    background-color: purple;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 16px;
+    display: flex;
+    width: 250px;
+    height: 160px;
+}
+
+.left {
+    text-align: left;
+}
+
+.icon-container {
+    background-color: maroon;
+    border-radius: 50%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    margin: 3px;
+
+}
+@media screen and (max-width:768px) {
+    .data-container{
+        flex-direction: column;
+        
+        align-items: center;
+    }
+    .connect-md{
+        display: none;
+    }
+    .menu-md-container{
+        display: none;
+    }
+    .menu-sm-container{
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        margin-top: 10px;
+        align-items: center;
+    }
+    .app-container{
+        min-height: 100vh;
+    }
+   
+}
