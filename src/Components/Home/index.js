@@ -29,18 +29,18 @@ class Home extends Component {
         const { key } = this.state
         console.log(key)
         let response,t;
-        if (key != "" && isAlpha(key)) {
+        if (key !== "" && isAlpha(key)) {
             response = await fetch(`https://api.dexscreener.com/latest/dex/search/?q=${key}`);
             t="Pair Search Results";
         }
-        else if (key != "") {
+        else if (key !== "") {
             response = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${key}`);
             t="Token Search Results";
         }
         try {
 
 
-            if (response.ok == true) {
+            if (response.ok === true) {
                 const data = await response.json();
                 console.log(data);
                 const updated = data.pairs.map(each => ({
