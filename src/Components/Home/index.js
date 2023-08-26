@@ -1,12 +1,12 @@
 import { Component } from 'react'
-import { AiOutlineInfoCircle,AiOutlineMenu} from 'react-icons/ai'
+import { AiOutlineInfoCircle, AiOutlineMenu } from 'react-icons/ai'
 import { BsCurrencyDollar, BsSearch } from 'react-icons/bs'
 import { RiTokenSwapLine, RiNftFill } from 'react-icons/ri'
 import { MdOutlineToken, MdToken } from 'react-icons/md'
 import './index.css'
 
 class Home extends Component {
-    state = { bI: [], bT: [], qT: [], price: [], key: '' ,text:''}
+    state = { bI: [], bT: [], qT: [], price: [], key: '', text: '' }
     componentDidMount() {
         this.getData();
     }
@@ -28,14 +28,14 @@ class Home extends Component {
         const isAlpha = str => /^[a-zA-Z]*$/.test(str);
         const { key } = this.state
         console.log(key)
-        let response,t;
+        let response, t;
         if (key !== "" && isAlpha(key)) {
             response = await fetch(`https://api.dexscreener.com/latest/dex/search/?q=${key}`);
-            t="Pair Search Results";
+            t = "Pair Search Results";
         }
         else if (key !== "") {
             response = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${key}`);
-            t="Token Search Results";
+            t = "Token Search Results";
         }
         try {
 
@@ -73,7 +73,7 @@ class Home extends Component {
                     bT: baseToken,
                     qT: quoteToken,
                     price: price1,
-                    text:t,
+                    text: t,
                 })
 
             }
@@ -88,7 +88,7 @@ class Home extends Component {
         const { qT, bI, bT, price, text } = this.state
         return (
             <div className='main-container'>
-                
+
                 <div className='app-container'>
                     <div className="menu-md-container">
                         <div className='menu'>
@@ -133,6 +133,7 @@ class Home extends Component {
                         </div>
 
                     </div>
+
                     <div className='s'>
                         <div className='menu-sm-container'>
                             <li className='item'>
@@ -150,6 +151,7 @@ class Home extends Component {
                         <div className='nav-container'>
                             <div className="navbar">
                                 <div className='search-container'>
+
                                     <input
                                         type="text"
                                         onChange={this.onGet}
@@ -158,7 +160,10 @@ class Home extends Component {
                                     />
                                     <button className='search' onClick={this.onSearch}><BsSearch /></button>
                                 </div>
-                                <button className="button connect-md" >Connect</button>
+
+                                <div className='m'>
+                                    <button className="button connect-md" >Connect</button>
+                                </div>
                             </div>
 
                         </div>
