@@ -6,7 +6,7 @@ import { MdOutlineToken, MdToken } from 'react-icons/md'
 import './index.css'
 
 class Home extends Component {
-    state = { bI: [], bT: [], qT: [], price: [], key: '' }
+    state = { bI: [], bT: [], qT: [], price: [], key: '' ,text:''}
     componentDidMount() {
         this.getData();
     }
@@ -28,12 +28,14 @@ class Home extends Component {
         const isAlpha = str => /^[a-zA-Z]*$/.test(str);
         const { key } = this.state
         console.log(key)
-        let response;
+        let response,t;
         if (key != "" && isAlpha(key)) {
             response = await fetch(`https://api.dexscreener.com/latest/dex/search/?q=${key}`);
+            t="Pair Search Results";
         }
         else if (key != "") {
             response = await fetch(`https://api.dexscreener.com/latest/dex/tokens/${key}`);
+            t="Token Search Results";
         }
         try {
 
@@ -71,6 +73,7 @@ class Home extends Component {
                     bT: baseToken,
                     qT: quoteToken,
                     price: price1,
+                    text:t,
                 })
 
             }
@@ -82,7 +85,7 @@ class Home extends Component {
     }
     //<ConnectButton label="Sign in" />
     render() {
-        const { qT, bI, bT, price, key } = this.state
+        const { qT, bI, bT, price, text } = this.state
         return (
             <div className='main-container'>
                 
@@ -159,7 +162,7 @@ class Home extends Component {
                             </div>
 
                         </div>
-
+                        <h1 className='t'>{text}</h1>
                         <div className='data-container'>
 
                             <div className='baseInfo-container'>

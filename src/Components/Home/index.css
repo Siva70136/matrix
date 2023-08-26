@@ -9,6 +9,10 @@
     display: flex;
     flex-direction: column;
 }
+.t{
+    color: white;
+    text-align: left;
+}
 .menu{
     margin-top: 15px;
     margin-bottom: 15px;
