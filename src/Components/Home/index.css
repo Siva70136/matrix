@@ -3,6 +3,7 @@
     display: flex;
     background-image: url('https://s3-alpha-sig.figma.com/img/51fd/bd7c/3cb3d57b1898d0d4ca08cb43c3373b86?Expires=1693785600&Signature=dFEUNmGeMPCSrRIfgu0qCPiDDxNlvWJh1VhKWtYEIqO9-5AD9JHrlevUopir05QHUNsfLe3Sag7dXQVKj53l4Ozwj8IAKAW2p7tZyEQkctnd5jFFBaxQvhse324E9V3RxPPqpwf3D8B8xbPrEctanfbX-W0y5YhJ8ZTul3sLsKNLNSDRh~hj9L8k3S7V9LVezxnjt9TSmD2ynCVIgizRVUUjP1pTNzBjpIgLEDOy-dSqIPh-82gXgEylQ~6szHvJBAPH7DrCvqrcYVw4bmQgKKxXtO6fb146axh1NCcIIuA2IAfTmBgkZ9nCDlxOnJVBie8Jp56w~JNDl2u9PmUtIQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
     background-size: cover;
+    jutify-content:space-between;
     
    
 }
